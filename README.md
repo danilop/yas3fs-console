@@ -2,20 +2,9 @@
 
 YAS3FSA web console is provided to easily monitor the nodes of a cluster.
 
-**If you use YAS3FS please share your experience on the [wiki](https://github.com/danilop/yas3fs/wiki), thanks!**
-
-* It allows to mount an S3 bucket (or a part of it, if you specify a path) as a local folder.
-* It works on Linux and Mac OS X.
-* For maximum speed all data read from S3 is cached locally on the node, in memory or on disk, depending of the file size.
-* Parallel multi-part downloads are used if there are reads in the middle of the file (e.g. for streaming).
-* Parallel multi-part uploads are used for files larger than a specified size.
-* With buffering enabled (the default) files can be accessed during the download from S3 (e.g. for streaming).
-* It can be used on more than one node to create a "shared" file system (i.e. a yas3fs "cluster").
-* [SNS](http://aws.amazon.com/sns/) notifications are used to update other nodes in the cluster that something has changed on S3 and they need to invalidate their cache.
-
-### Web console
-
 This is web console to easy monitor the nodes of a YAS3FS cluster, i.e. nodes that are listening to the same SNS topic.
+
+**If you use YAS3FS please share your experience on the [wiki](https://github.com/danilop/yas3fs/wiki), thanks!**
 
 YAS3FS (Yet Another S3-backed File System) is a [Filesystem in Userspace (FUSE)](http://fuse.sourceforge.net)
 interface to [Amazon S3](http://aws.amazon.com/s3/).
