@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Yas3fs-console : A web console to easy monitor the nodes of a YAS3FS cluster." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Yas3fs-console</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/danilop/yas3fs-console">View on GitHub</a>
+
+          <h1 id="project_title">Yas3fs-console</h1>
+          <h2 id="project_tagline">A web console to easy monitor the nodes of a YAS3FS cluster.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/danilop/yas3fs-console/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/danilop/yas3fs-console/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="yas3fs-console" class="anchor" href="#yas3fs-console"><span class="octicon octicon-link"></span></a>YAS3FS Console</h3>
+
+<p>This is web console to easy monitor the nodes of a YAS3FS cluster, i.e. nodes that are listening to the same SNS topic.</p>
+
+<p>YAS3FS (Yet Another S3-backed File System) is a <a href="http://fuse.sourceforge.net">Filesystem in Userspace (FUSE)</a>
+interface to <a href="http://aws.amazon.com/s3/">Amazon S3</a>.
+It was inspired by <a href="http://code.google.com/p/s3fs/">s3fs</a> but rewritten from scratch to implement
+a distributed cache synchronized by <a href="http://aws.amazon.com/sns/">Amazon SNS</a> notifications.</p>
+
+<p><strong>If you use YAS3FS please share your experience on the <a href="https://github.com/danilop/yas3fs/wiki">wiki</a>, thanks!</strong></p>
+
+<p>For more informations please look at the <a href="https://github.com/danilop/yas3fs">YAS3FS</a> project.</p>
+
+<ul>
+<li>AWS credentials can be passed using AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY environment variables.</li>
+<li>The AWS_REGION environment variable must point to a valid AWS region (e.g. eu-west-1)</li>
+<li>In an <a href="http://aws.amazon.com/ec2/">EC2</a> instance a <a href="http://aws.amazon.com/iam/">IAM</a> role can be used to give access to SNS/SQS resources.</li>
+</ul><p>The web console is based on <a href="http://nodejs.org">Node.js</a>, you can run it with:</p>
+
+<pre><code>git clone git://github.com/danilop/yas3fs.git
+cd yas3fs/yas3fs-console
+npm install
+node server.js
+</code></pre>
+
+<p>It is using port 3000 by default (e.g. "http://localhost:3000"), but you can change it using the PORT environment variable, e.g.:</p>
+
+<pre><code>export PORT=8080
+node yas3fs-console/server.js
+</code></pre>
+
+<p>Here’s a sample screenshot of the web interface:</p>
+
+<p><img src="http://blog.danilopoccia.net/wp-content/uploads/sites/2/2013/06/yas3fs-console.png" alt="YAS3FS Console screenshot"></p>
+
+<p>The list of nodes and the attributes are updated dynamically depending on the configuration parameters.</p>
+
+<p>In the future I’d like to add management capabilities as well into the console, such as “cache reset on a node”, or alarms, such as “disk cache is running out of space”.</p>
+
+<p>Happy File Sharing!</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Yas3fs-console maintained by <a href="https://github.com/danilop">danilop</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
