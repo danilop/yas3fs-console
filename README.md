@@ -12,7 +12,7 @@ a distributed cache synchronized by [Amazon SNS](http://aws.amazon.com/sns/) not
 For more informations please look at the [YAS3FS](https://github.com/danilop/yas3fs) project.
 
 * AWS credentials can be passed using AWS\_ACCESS\_KEY\_ID and AWS\_SECRET\_ACCESS\_KEY environment variables.
-* The AWS_DEFAULT_REGION environment variable must point to a valid AWS region (e.g. eu-west-1)
+* The AWS_REGION environment variable must point to a valid AWS region (e.g. eu-west-1)
 * In an [EC2](http://aws.amazon.com/ec2/) instance a [IAM](http://aws.amazon.com/iam/) role can be used to give access to SNS/SQS resources.
 
 The web console is based on [Node.js](http://nodejs.org), you can run it with:
