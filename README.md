@@ -9,7 +9,7 @@ a distributed cache synchronized by [Amazon SNS](http://aws.amazon.com/sns/) not
 
 **If you use YAS3FS please share your experience on the [wiki](https://github.com/danilop/yas3fs/wiki), thanks!**
 
-For more informations please look at the [YAS3FS project](https://github.com/danilop/yas3fs).
+For more informations please look at the [YAS3FS](https://github.com/danilop/yas3fs) project.
 
 * AWS credentials can be passed using AWS\_ACCESS\_KEY\_ID and AWS\_SECRET\_ACCESS\_KEY environment variables.
 * The AWS_DEFAULT_REGION environment variable must point to a valid AWS region (e.g. eu-west-1)
