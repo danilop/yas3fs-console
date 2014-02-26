@@ -2,12 +2,12 @@
 
 This is web console to easy monitor the nodes of a YAS3FS cluster, i.e. nodes that are listening to the same SNS topic.
 
-**If you use YAS3FS please share your experience on the [wiki](https://github.com/danilop/yas3fs/wiki), thanks!**
-
 YAS3FS (Yet Another S3-backed File System) is a [Filesystem in Userspace (FUSE)](http://fuse.sourceforge.net)
 interface to [Amazon S3](http://aws.amazon.com/s3/).
 It was inspired by [s3fs](http://code.google.com/p/s3fs/) but rewritten from scratch to implement
 a distributed cache synchronized by [Amazon SNS](http://aws.amazon.com/sns/) notifications.
+
+**If you use YAS3FS please share your experience on the [wiki](https://github.com/danilop/yas3fs/wiki), thanks!**
 
 For more informations please look at the [YAS3FS project](https://github.com/danilop/yas3fs).
 
