@@ -1,7 +1,5 @@
 ### YAS3FS Console
 
-YAS3FSA web console is provided to easily monitor the nodes of a cluster.
-
 This is web console to easy monitor the nodes of a YAS3FS cluster, i.e. nodes that are listening to the same SNS topic.
 
 **If you use YAS3FS please share your experience on the [wiki](https://github.com/danilop/yas3fs/wiki), thanks!**
