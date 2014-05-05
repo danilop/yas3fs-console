@@ -112,6 +112,7 @@ function onAdd(data) {
 	n.disk_size = data[5];
 	n.dq = data[6];
 	n.pq = data[7];
+	n.s3q = data[8];
 	n.updateTime = new Date();
 	nodes[data[0]] = n;
 	updateTable();
@@ -145,6 +146,7 @@ function updateTable() {
 	'<th>Disk Cache Size (in bytes)</th>' +
 	'<th>Download Queue Length</th>' +
 	'<th>Prefetch Queue Length</th>' +
+	'<th>S3 Queue Length</th>' +
 	'</tr>';
     console.log('nodes '+nodes);
     var ids = getKeys(nodes);
@@ -171,6 +173,7 @@ function updateTable() {
 	    '<td>' + node.disk_size + '</td>' +
 	    '<td>' + node.dq + '</td>' +
 	    '<td>' + node.pq + '</td>' +
+	    '<td>' + node.s3q + '</td>' +
 	    '</tr>';
     }
     nodeTable.concat('</table>');
