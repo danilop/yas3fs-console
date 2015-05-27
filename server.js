@@ -2,6 +2,8 @@ var AWS = require('aws-sdk');
 var util = require('util');
 var uuid = require('node-uuid'); // For unique queue name
 var express = require('express'); // For static files
+var favicon = require('serve-favicon');
+var morgan = require('morgan');
 
 var sns;
 var sqs;
@@ -27,8 +29,8 @@ function init() {
     sqsWaitTimeSeconds = 20;
 
     app = express();
-    app.use(express.favicon());
-    app.use(express.logger('dev'));
+    app.use(favicon(__dirname + '/public/favicon.ico'));
+    app.use(morgan('combined'));
     app.use(express.static(__dirname + '/public'));
     server = app.listen(port);
     util.log('Listening on port: ' + port);
