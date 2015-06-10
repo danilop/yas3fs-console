@@ -5,7 +5,9 @@
 	"util": "*",
 	"node-uuid": "*",
 	"express": "*",
-	"socket.io": "*"
+	"socket.io": "*",
+	"serve-favicon": "*",
+	"morgan": "*"
     },
     "scripts": {
     	"start": "node server"
