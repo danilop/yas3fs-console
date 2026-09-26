@@ -35,7 +35,7 @@ function init() {
     server = app.listen(port);
     util.log('Listening on port: ' + port);
 
-    io = require('socket.io').listen(server, {'log level': 1});
+    io = require('socket.io')(server);
 
     queues = {};
     clients = {};
