@@ -48,6 +48,12 @@ var setEventHandlers = function() {
 }
 
 function onSocketConnection(client) {
+    var authToken = process.env.AUTH_TOKEN;
+    if (authToken && client.handshake.query.token !== authToken) {
+	util.log('Unauthorized connection attempt: '+client.id);
+	client.disconnect(true);
+	return;
+    }
     util.log('New user has connected: '+client.id);
     if (!clients[client.id]) {
 	clients[client.id] = {}
